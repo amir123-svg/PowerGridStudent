@@ -125,13 +125,13 @@ Ces commandes doivent mettre à jour la machine virtuelle, et installer Git et P
 
 ### Création de clés SSH pour l'authentification avec GitHub
 
-Votre invite de commande est maintenant située à l'intérieur d'une machine virtuelle configurée pour le développement Python. Vous pourrez bientôt télécharger le projet PowerGrid pour commencer à programmer. Cependant, l'utilisateur de la machine virtuelle ne possède pas encore les droits nécessaires pour pousser des modifications vers le dépôt sur GitHub. GitHub gère les droits de modification à partir de jeux de clés cryptographiques générés par un utilisateur pour garantir son identité. Linux dispose d'une commande permettant de générer une clé de chiffrement. Celle-ci vous permettra de confirmer votre identité au site GitHub. Exécutez tout d'abord la commande :
+Votre invite de commande est maintenant située à l'intérieur d'une machine virtuelle configurée pour le développement Python. Vous pourrez bientôt télécharger le projet PowerGrid pour commencer à programmer. Cependant, l'utilisateur de la machine virtuelle ne possède pas encore les droits nécessaires pour pousser des modifications vers le dépôt sur GitHub. GitHub gère les droits de modification à partir de jeux de clés cryptographiques générés par un utilisateur pour garantir son identité. Linux dispose d'une commande permettant de générer une clé de chiffrement. Celle-ci vous permettra de confirmer votre identité au site GitHub. Exécutez tout d'abord la commande suivante, en acceptant le chemin par défaut pour les fichiers générés (tapez ENTRÉE), et en choisissant un mot de passe simple pour la clé SSH :
 
 ```bash
 ssh-keygen -t ed25519 -C "prenom.nom@etudiant.univ-rennes.fr"
 ```
 
-Avec cette commande, votre système va générer deux fichiers contenant votre clé publique et votre clé privée. Validez l'emplacement par défaut pour ces fichiers, et tapez un mot de passe lorsque cela vous est demandé. Il s'agit du mot de passe qui sécurise votre clé. Pour ce TP, vous pouvez choisir le même que celui que vous avez entré comme mot de passe utilisateur pour la machine virtuelle. Tapez enfin la commande :
+Le mot de passe choisi est celui qui sécurise votre clé. Pour ce TP, vous pouvez choisir le même que celui que vous avez entré comme mot de passe utilisateur pour la machine virtuelle. Tapez enfin la commande :
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
