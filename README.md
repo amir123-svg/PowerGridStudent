@@ -201,6 +201,12 @@ Par exemple, pour me connecter à une machine virtuelle `Debian` avec l'utilisat
 wsl --distribution Debian --user louis
 ```
 
+Pour retourner à l'intérieur de votre espace personnel sur la VM, vous pouvez finalement exécuter la commande :
+
+```bash
+cd ~
+```
+
 #### Export d'une machine virtuelle pour réutilisation ultérieure
 
 > Note : Cette section est principalement à destination des étudiants ayant choisi de développer en utilisant les machines de l'université, les autres étudiants peuvent ignorer ces instructions.
