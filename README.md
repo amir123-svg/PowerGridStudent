@@ -413,7 +413,7 @@ Afin de configurer une exécution du Pipeline environ une fois toutes les 15 min
 
 Les options **GitHub hook trigger for GITScm polling** et **Scrutation de l'outil de gestion de version** permettent de générer des exécutions uniquement selon certaines conditions relatives aux événements sur le dépôt Git. Elles ne sont pas couvertes dans ce sujet, mais peuvent être explorées durant le TP.
 
-Enfin, la dernière section vous permet de définir le Pipeline à exécuter. La première boîte vous invite à choisir un gestionnaire de version. Choisissez **Git** parmi les options. La boîte suivante vous permet de choisir la source de votre Pipeline. Choisissez **Pipeline Script from SCM** : de nouveaux champs apparaissent.
+Enfin, la dernière section vous permet de définir le Pipeline à exécuter. La première boîte vous invite à choisir la source de votre Pipeline. Choisissez **Pipeline Script from SCM**. La boîte suivante vous permet de choisir un gestionnaire de version. Choisissez **Git** parmi les options : de nouveaux champs apparaissent.
 
 Dans le champ **Repository url**, entrez l'url de votre dépôt sur GitHub, qui devrait ressembler à :
 
