@@ -235,6 +235,14 @@ Pour lancer la machine virtuelle importée, il vous suffira alors de taper la co
 wsl --distribution Debian-dev --user [NOM UTILISATEUR]
 ```
 
+Puis tapez la commande :
+
+```bash
+cd ~
+```
+
+Pour rejoindre votre dossier personnel sur la VM (où se trouve votre projet).
+
 <a name="jenkins" />
 
 ## Mise en place du serveur CI
