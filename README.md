@@ -227,6 +227,8 @@ Afin de charger votre machine virtuelle sauvegardée, lors d'une utilisation ult
 wsl --import Debian-dev DebianDev debian-dev.tar
 ```
 
+Le premier paramètre de cette commande est le nom que portera la distribution dans WSL une fois importée. Le deuxième paramètre est le chemin vers le dossier dans lequel la machine virtuelle sera stockée, et le dernier argument est le nom du fichier `.tar` dans lequel la VM a été exportée par le passé.
+
 Pour lancer la machine virtuelle importée, il vous suffira alors de taper la commande :
 
 ```bash
