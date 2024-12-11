@@ -221,7 +221,7 @@ wsl --export Debian debian-dev.tar
 
 Vous devriez voir apparaître un fichier `debian-dev.tar` faisant quelques gigaoctets. Il s'agit du fichier à conserver dans un endroit sûr.
 
->> Si vous travaillez sur les machines de l'université, placez ce fichier sur le réseau (lecteur **H:**) ou sur un emplacement cloud personnel. Un fichier laissé sur le lecteur **C:** ne sera pas forcément acessible lors de votre prochaine connexion.
+> Si vous travaillez sur les machines de l'université, placez ce fichier sur le réseau (lecteur **H:**) ou sur un emplacement cloud personnel. Un fichier laissé sur le lecteur **C:** ne sera pas forcément acessible lors de votre prochaine connexion.
 
 Afin de charger votre machine virtuelle sauvegardée, lors d'une utilisation ultérieure, vous pourrez utiliser la commande suivante :
 
@@ -229,7 +229,7 @@ Afin de charger votre machine virtuelle sauvegardée, lors d'une utilisation ult
 wsl --import Debian-dev DebianDev debian-dev.tar
 ```
 
->> Si vous travaillez sur les machines de l'université, exécutez cette commande sur le lecteur local **C:** (par exemple dans vos documents). Il vous manquera des droits si vous cherchez à réaliser cette opération drectement sur le réseau.
+> Si vous travaillez sur les machines de l'université, exécutez cette commande sur le lecteur local **C:** (par exemple dans vos documents). Il vous manquera des droits si vous cherchez à réaliser cette opération drectement sur le réseau.
 
 Le premier paramètre de cette commande est le nom que portera la distribution dans WSL une fois importée. Le deuxième paramètre est le chemin vers le dossier dans lequel la machine virtuelle sera stockée, et le dernier argument est le nom du fichier `.tar` dans lequel la VM a été exportée par le passé.
 
@@ -272,11 +272,8 @@ Une fois que l'invite de commande montre que vous êtes dans la machine virtuell
 ```bash
 sudo apt update
 sudo apt upgrade -y
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt update
 sudo apt install -y jenkins fontconfig openjdk-17-jre
 sudo ufw enable
