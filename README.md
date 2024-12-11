@@ -269,6 +269,8 @@ Une fois la machine virtuelle démarrée, il vous est demandé de choisir un nom
 
 Une fois que l'invite de commande montre que vous êtes dans la machine virtuelle, exécutez les commandes suivantes pour configurer l'environnement :
 
+> Vous pouvez avoir besoin d'exécuter les commandes suivantes une par une plutôt qu'en bloc, pour que celles-ci soient comprises par le terminal Windows.
+
 ```bash
 sudo apt update
 sudo apt upgrade -y
@@ -364,6 +366,8 @@ Il vous est demandé dans l'interface de déverrouiller Jenkins pour la premièr
 ```bash
 sudo cat /var/lib/jenkins/secrets/intialAdminPassword
 ```
+
+> Si cette commande ne fonctionne pas, vous pouvez également trouver le mot de passe quelque part dans la sortie de jenkins obtenue en exécutant la commande `journalctl -u jenkins`.
 
 Copiez ce mot de passe dans le champ correspondant dans votre navigateur web, et validez. Choisissez d'installer les plugins recommandés et attendez la fin de leur configuration.
 
