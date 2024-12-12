@@ -181,9 +181,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Dans l'interface de Visual Studio Code, un message a du apparaître pour signaler la détection de la création d'un nouvel environnement Python. Acceptez la sélection de cet environnement pour le projet.
+Dans l'interface de Visual Studio Code, un message a du apparaître pour signaler la détection de la création d'un nouvel environnement Python. Acceptez la sélection de cet environnement pour le projet. Si aucun message n'apparaît, vous pouvez sélectionner l'environnement python `venv` en cliquant sur la mention concernant votre version de python, en bas à droite de l'interface quand un fichier `.py` est ouvert dans l'éditeur.
 
-Vérifiez que vous êtes en mesure d'exécuter le projet (script `PowerGrid.py`).
+Vérifiez que vous êtes en mesure d'exécuter le projet (script `PowerGrid.py`). Si vous n'avez pas directement une flèche verte pour l'exécution en haut à droite de l'interface de VSCode, vous pouvez exécuter vos scripts en ligne de commande dans le terminal de l'éditeur. L'activation d'un environnement python dans le terminal se fait grâce à la commande :
+
+```bash
+source venv/bin/activate
+```
 
 <a name="export-wsl" />
 
