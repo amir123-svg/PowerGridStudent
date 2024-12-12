@@ -173,6 +173,8 @@ code .
 
 Ouvrez l'un des fichiers Python du projet dans VSCode. Un message devrait apparaître, vous invitant à installer l'extension Python dans WSL. Faites cette installation.
 
+> Dans le terminal de Visual Studio Code, si vous travaillez sur une machine de l'université, il est possible que vous soyez connecté en tant que `root` lorsque vous ouvrez votre projet. Si c'est le cas, changez d'utilisateur en utilisant la commande `su -- [NOM UTILISATEUR]`.
+
 Dans le terminal de la machine virtuelle, vous devez maintenant créer un environnement Python, dans lequel seront installés les paquets dont dépend votre projet. Exécutez les commandes suivantes :
 
 ```bash
