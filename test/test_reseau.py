@@ -8,16 +8,38 @@ from Terrain import Terrain, Case
 class TestReseau(unittest.TestCase):
 
     def test_definition_entree(self):
-        # TODO
-        self.fail()
-
+        terrain = Terrain()
+        terrain.ajouter_noeud(0, (3, 3))
+        
+        terrain.definir_entree(1)
+        self.assertEqual(terrain.noeud_entree, 1)
+        
+     
     def test_ajout_noeud(self):
-        # TODO
-        self.fail()
+        terrain = Terrain()
+        terrain.ajouter_noeud(1, (3, 4))
+        terrain.ajouter_noeud(2, (2, 4))
+        terrain.ajouter_noeud(3, (3, 5))
+        terrain.ajouter_noeud(4, (4, 4))
+
+        self.assertIn(1, terrain.noeuds)
+        self.assertEqual(terrain.noeuds[1], (3, 4))
+        self.assertEqual(terrain.noeuds[2], (2, 4))
+        self.assertEqual(terrain.noeuds[3], (3, 5))
+        self.assertEqual(terrain.noeuds[4], (4, 4))
 
     def test_ajout_arc(self):
-        # TODO
-        self.fail()
+        terrain.ajouter_arc(1, 2)
+        terrain.ajouter_arc(2, 3)
+        terrain.ajouter_arc(3, 1)
+        
+        self.assertIn((1, 2), terrain.arcs)
+        self.assertIn((2, 3), terrain.arcs)
+        self.assertIn((1, 3), terrain.arcs)
+        
+        self.assertNotIn((2, 1), terrain.arcs) 
+
+
 
     def test_validation_correcte(self):
         r = Reseau()
@@ -107,5 +129,6 @@ class TestReseau(unittest.TestCase):
         self.assertFalse(r.valider_distribution(t))
 
 if __name__ == "__main__":
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output="test-reports"))
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output="test-reports"))
 
